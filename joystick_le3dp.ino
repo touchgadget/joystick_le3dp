@@ -117,7 +117,7 @@ void loop() {
   if (Le3dp.connected) {
     if (Le3dp.available) {
       if (sizeof(Le3dp.report) == Le3dp.report_len) {
-#ifdef USB_DEBUG
+#if USB_DEBUG
         // Hex dump the HID report
         uint8_t *rpt = (uint8_t *)&Le3dp.report;
         DBG_printf("LE3DP report(%d): ", Le3dp.report_len);
